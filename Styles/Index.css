@@ -1,0 +1,210 @@
+@import url(Global.css);
+
+
+body{
+    position: relative;
+    background-image: radial-gradient(#e3b1fe,#f7eefc 80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+h1{
+    font-size: 2em;
+    color: #4a235a;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#title{
+    position: absolute;
+    font-size: 1em;
+    color: black;
+    top: 0;
+    z-index: 10;
+    left: 35%;
+    width: 30%;
+    margin: 10% auto auto auto;
+    text-align: center;
+}
+
+#title > p{
+    font-size: 1.6em;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Horisontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 30px 20% 0 20%;
+    width: 60%;
+    justify-content: space-around;
+}
+#Images{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#Images > div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#Images > div:nth-child(1){
+    right: 10%;
+    top: 20%;
+    background-color: #fde3f6;
+}
+
+#Images > div:nth-child(2){
+
+    left: 10%;
+    top: 20%;
+    background-color: #fdefe3;
+}
+
+#Images > div:nth-child(3){
+    left: 30%;
+    bottom: 10%;
+    background-color: #f0fde3;
+}
+
+#Images > div:nth-child(4){
+    right: 30%;
+    bottom: 10%;
+    background-color: #f7eefc;
+}
+
+#Images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 250px;
+    background-color: #ffe6ea;
+}
+
+.image-wrapper {
+    margin: 20px;
+    border: 2px solid #ffb6c1;
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 20px;
+}
+
+.corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+.corner-tl {
+    top: -10px;
+    left: -10px;
+    border-top: 2px solid #ffb6c1;
+    border-left: 2px solid #ffb6c1;
+}
+
+.corner-tr {
+    top: -10px;
+    right: -10px;
+    border-top: 2px solid #ffb6c1;
+    border-right: 2px solid #ffb6c1;
+}
+
+.corner-bl {
+    bottom: -10px;
+    left: -10px;
+    border-bottom: 2px solid #ffb6c1;
+    border-left: 2px solid #ffb6c1;
+}
+
+.corner-br {
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 2px solid #ffb6c1;
+    border-right: 2px solid #ffb6c1;
+}
+
+
+#reviews{
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.review{
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.reviewer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.reviewer > img{
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    border-radius: 50%;
+    margin: 10px;
+    border-width: 1px;
+    border-style:solid ;
+    background-color: #fde3f6;
+    padding: 10px;
+}
+.ReviewContent{
+    background: #fde3f6;
+    color: #4a235a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: -30px;
+    padding: 50px 10px 10px 10px;
+    border-radius: 15px;
+}
