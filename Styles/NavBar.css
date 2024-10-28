@@ -1,29 +1,19 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-    font-family: "Candara", sans-serif;
-    color: #000; /* Black text color */
-    background-color: #f2f2f2; /* White background */
-}
 
 /* Navbar Styling */
 .navbar {
+    z-index: 99;
+    width: 100%;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #f2f2f2; /* White background */
 
 }
 
 .logo img {
-    width: 60px; /* Adjust logo size */
+    width: 60px;
     height: auto;
 }
 
