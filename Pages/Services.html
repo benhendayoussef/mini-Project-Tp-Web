@@ -10,25 +10,28 @@
 
 </head>
 <body>
-<header class="navbar">
-    <div class="logo">
-        <img src="../Assets/pets_logo.png" alt="Site Logo">
-    </div>
-    <div class="menu" >
-        <nav class="nav-links">
-            <a href="../index.html" class="nav-link home-link ">Home</a>
-            <a href="./PetsInfo.html" class="nav-link veterinary-link ">Pets Info</a>
-            <a href="./Services.html" class="nav-link contact-link active">Services</a>
-            <a href="./BookNow.html" class="nav-link animals-link ">Book Now</a>
-        </nav>
-    </div>
-    <div class="nav-buttons">
-        <button class="btn sign-in">Sign In</button>
-        <button class="btn sign-up">Sign Up</button>
-    </div>
-</header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../Assets/pets_logo.png" alt="Site Logo">
+        </div>
+        
+        <img class="hamburger" src="../Assets/hamburger.png"/>
+        <div class="menu">
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link home-link">Home</a>
+                <a href="../Pages/PetsInfo.html" class="nav-link veterinary-link">Pets Info</a>
+                <a href="../Pages/Services.html" class="nav-link contact-link active">Services</a>
+                <a href="../Pages/BookNow.html" class="nav-link animals-link">Book Now</a>
+            </nav>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="btn sign-in">Sign In</button>
+            <button class="btn sign-up">Sign Up</button>
+        </div>
+    </header>
 <main>
-    <div class="main-container">
+    <section class="main-container">
         <div class="Images">
             <div class="image-wrapper">
                 <img src="../Assets/cat1.png" alt="cat image"/>
@@ -50,48 +53,44 @@
             <h2>Our Services</h2>
             <p>Welcome to our pet care services! We offer a range of specialized services to ensure your furry friends receive the best care possible. From comprehensive dog and cat visits to refreshing pet baths and stylish pet cuts, our dedicated team is here to keep your pets happy, healthy, and looking their best. Trust us to provide the love and attention your pets deserve</p>
         </div>
-    </div>
+    </section>
 
-    <div class="services" >
-        <div class="service-container">
-            <div class="service-icon">
-            <i class="fas fa-dog"></i>
-            </div>
-            <h3>Dog Pet Visit</h3>
-            <p>Ensure your dog gets the best care with our comprehensive dog visit services</p>
-            <p class="price">TND 99 د.ت</p>
-
-        </div>
-        <div class="service-container">
-            <div class="service-icon">
-                <i class="fas fa-cat"></i>
-            </div>
-            <h3>Cat Pet Visit</h3>
-            <p>Keep your cat happy and healthy with our dedicated cat visit services</p>
-            <p class="price">TND 90.5 د.ت</p>
-
-
-        </div>
-        <div class="service-container">
-            <div class="service-icon">
-                <i class="fas fa-bath"></i>
-            </div>
-        <h3>Pet Bath</h3>
-        <p>Treat your pet to a refreshing bath, leaving them clean and smelling great</p>
-            <p class="price">TND 84 د.ت</p>
-
-        </div>
-        <div class="service-container">
-            <div class="service-icon">
-                <i class="fas fa-cut"></i>
-            </div>
-            <h3>Pet Grooming</h3>
-            <p>Give your pet a stylish new look with our professional pet grooming services</p>
-            <p class="price">TND 113 د.ت</p>
-
-        </div>
-    </div>
+    <section >
+        <h2>Services Prices</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dog Pet Visit</td>
+                <td>Ensure your dog gets the best care with our comprehensive dog visit services</td>
+                <td>TND 99 د.ت</td>
+            </tr>
+            <tr>
+                <td>Cat Pet Visit</td>
+                <td>Keep your cat happy and healthy with our dedicated cat visit services</td>
+                <td>TND 90.5 د.ت</td>
+            </tr>
+            <tr>
+                <td>Pet Bath</td>
+                <td>Treat your pet to a refreshing bath, leaving them clean and smelling great</td>
+                <td>TND 84 د.ت</td>
+            </tr>
+            <tr>
+                <td>Pet Grooming</td>
+                <td>Give your pet a stylish new look with our professional pet grooming services</td>
+                <td>TND 113 د.ت</td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
 </main>
 
+<script src="../Code/Navbar.js"></script>
 </body>
 </html>
