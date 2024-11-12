@@ -39,6 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    
+
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const siteLogo = document.getElementById('site-logo');
+    console.log(siteLogo); // This should log the element or null
+    if (siteLogo) {
+        siteLogo.addEventListener('click', function() {
+            window.location.href = '../index.html';
+        });
+    }
+});
+
 

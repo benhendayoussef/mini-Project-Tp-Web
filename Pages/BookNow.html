@@ -6,6 +6,7 @@
     <title>Book Now</title>
     <link rel="stylesheet" href="../Styles/NavBar.css">
     <link rel="stylesheet" href="../Styles/Pages.css">
+    <link rel="icon" href="../Assets/pets_logo.png" type="image/png">  <!-- Favicon -->
 
 </head>
 <body>
@@ -91,42 +92,73 @@
         <div id="AppointementForm">
             <h2>Make an appointment</h2>
             <p>The administrator will contact you shortly to confirm the time and day of consultation.</p>
-    
-            <form>
+
+            <form id="bookingForm">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
+                    <span id="nameError" class="error-message" style="display:none; color: red;">Name is required.</span>
+                    <span id="nameIcon" class="validation-icon" style="display:none;">✔</span>
                 </div>
-    
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
+                    <span id="emailError" class="error-message" style="display:none; color: red;">Please enter a valid email.</span>
+                    <span id="emailIcon" class="validation-icon" style="display:none;">✔</span>
                 </div>
-    
+
                 <div class="form-group">
-                    <label for="phone">Ph. number</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="bookingType">Booking Type</label>
+                    <select name="bookingType" id="bookingType" required>
+                        <option value="" disabled selected>Select Booking Type</option>
+                        <option value="checkup">Checkup</option>
+                        <option value="grooming">Grooming</option>
+                        <option value="vaccination">Vaccination</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="bookingTypeError" class="error-message" style="display:none; color: red;">Please select a booking type.</span>
+                    <span id="bookingTypeIcon" class="validation-icon" style="display:none;">✔</span>
                 </div>
-    
+
+                <div class="form-group">
+                    <label for="reason">Reason/Description</label>
+                    <textarea id="reason" name="reason" required></textarea>
+                    <span id="reasonError" class="error-message" style="display:none; color: red;">Please provide a reason or description.</span>
+                    <span id="reasonIcon" class="validation-icon" style="display:none;">✔</span>
+                </div>
+
                 <div class="terms">
                     <input type="checkbox" id="terms" name="terms" required>
                     <label for="terms">By clicking the “Enter” button, you accept the terms of personal data processing</label>
+                    <span id="termsError" class="error-message" style="display:none; color: red;">Please accept the terms.</span>
                 </div>
-    
+
                 <button type="submit">Book now</button>
             </form>
-            <img id="pawImage1" class="paws" src="../Assets/paw.png" alt="paw image"/>
-            <img id="pawImage2" class="paws" src="../Assets/paw2.png" alt="paw image"/>
-    
-            <!--<div class="paws">
-                <span>🐾</span>
-                <span>🐾</span>
-                <span>🐾</span>
-            </div>-->
+        </div>
+
+    </section>
+
+    <section>
+        <div  id="AppointementsTableDiv">
+            <h1>Appointements Table</h1>
+            <table id="AppointementsTable">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Booking Type</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            </table>
         </div>
     </section>
 </main>
 
-<script src="../Code/Navbar.js"></script>
+<script src="../Code/BookNow.js"></script>
 </body>
 </html>
