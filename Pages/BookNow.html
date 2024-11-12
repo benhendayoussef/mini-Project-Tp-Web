@@ -12,7 +12,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="../Assets/pets_logo.png" alt="Site Logo">
+            <img src="../Assets/pets_logo.png" alt="Site Logo"  onclick="window.location.href='../index.html';">
         </div>
         
         <img class="hamburger" src="../Assets/hamburger.png"/>
@@ -93,7 +93,7 @@
             <h2>Make an appointment</h2>
             <p>The administrator will contact you shortly to confirm the time and day of consultation.</p>
 
-            <form id="bookingForm">
+            <form id="bookingForm" novalidate><!-- novalidate to prevent default HTML5 validation  so we can work on it manually-->
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -133,6 +133,7 @@
                     <label for="terms">By clicking the “Enter” button, you accept the terms of personal data processing</label>
                     <span id="termsError" class="error-message" style="display:none; color: red;">Please accept the terms.</span>
                 </div>
+                <p id="Message"></p>
 
                 <button type="submit">Book now</button>
             </form>
