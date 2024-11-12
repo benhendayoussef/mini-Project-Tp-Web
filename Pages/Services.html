@@ -26,7 +26,7 @@
         </div>
         
         <div class="nav-buttons">
-            <button class="btn sign-in">Sign In</button>
+            <button class="btn sign-in" onclick="window.location.href='Login.html';">Sign In</button>
             <button class="btn sign-up">Sign Up</button>
         </div>
     </header>
@@ -62,29 +62,35 @@
             <tr>
                 <th>Product Name</th>
                 <th>Category</th>
-                <th>Price</th>
+                <th>Price en <select id="devise" name="devise" onchange="convert()">
+                    <option value="Dt">DT</option>
+                    <option value="$">$</option>
+                    <option value="€">€</option>
+                    <option value="£">£</option>
+                  </select>
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Dog Pet Visit</td>
                 <td>Ensure your dog gets the best care with our comprehensive dog visit services</td>
-                <td>TND 99 د.ت</td>
+                <td><p class="price">TND  99  د.ت</p></td>
             </tr>
             <tr>
                 <td>Cat Pet Visit</td>
                 <td>Keep your cat happy and healthy with our dedicated cat visit services</td>
-                <td>TND 90.5 د.ت</td>
+                <td><p class="price">TND  90.5  د.ت</p></td>
             </tr>
             <tr>
                 <td>Pet Bath</td>
                 <td>Treat your pet to a refreshing bath, leaving them clean and smelling great</td>
-                <td>TND 84 د.ت</td>
+                <td><p class="price">TND  84  د.ت</p></td>
             </tr>
             <tr>
                 <td>Pet Grooming</td>
                 <td>Give your pet a stylish new look with our professional pet grooming services</td>
-                <td>TND 113 د.ت</td>
+                <td><p class="price">TND  113  د.ت</p></td>
             </tr>
         </tbody>
     </table>
@@ -92,5 +98,6 @@
 </main>
 
 <script src="../Code/Navbar.js"></script>
+<script src="../Code/Converter.js"></script>
 </body>
 </html>

@@ -146,6 +146,9 @@
   border-right: 2px solid #ffb6c1;
 }
 
+
+
+
 @media screen and (max-width: 900px) {
   .Images {
     display: none;
