@@ -4,7 +4,7 @@ class Database {
 
     public static function connect() {
         if (self::$pdo === null) {
-            $config = include(__DIR__ . '/../../config.php');
+            $config = include(__DIR__ . '/../../public/config/config.php');
 
             try {
                 self::$pdo = new PDO(
