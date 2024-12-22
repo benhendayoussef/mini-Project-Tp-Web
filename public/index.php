@@ -22,9 +22,9 @@
         <div class="menu">
             <nav class="nav-links">
                 <a href="index.html" class="nav-link home-link active">Home</a>
-                <a href="./Pages/PetsInfo.html" class="nav-link veterinary-link">Pets Info</a>
-                <a href="./Pages/Services.html" class="nav-link contact-link">Services</a>
-                <a href="./Pages/BookNow.html" class="nav-link animals-link">Book Now</a>
+                <a href="../Pages/PetsInfo.html" class="nav-link veterinary-link">Pets Info</a>
+                <a href="../Pages/Services.html" class="nav-link contact-link">Services</a>
+                <a href="../Pages/BookNow.html" class="nav-link animals-link">Book Now</a>
             </nav>
         </div>
         
