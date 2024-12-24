@@ -40,15 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-});
+})
+
 document.addEventListener('DOMContentLoaded', function() {
     const siteLogo = document.getElementById('site-logo');
-    console.log(siteLogo); // This should log the element or null
+    console.log(siteLogo);  // Check if the element is available
     if (siteLogo) {
         siteLogo.addEventListener('click', function() {
-            window.location.href = '../index.html';
+            location.href = '/mini-Project-Tp-Web/public/index.php';
         });
     }
 });
-
-

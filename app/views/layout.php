@@ -15,19 +15,19 @@
 <body>
 <header class="navbar">
     <div class="logo">
-        <img id="site-logo" src="../../../public/Assets/pets_logo.png" alt="Site Logo">
+        <img id="site-logo" src="/mini-Project-Tp-Web/public/Assets/pets_logo.png" alt="Site Logo">
     </div>
     <div class="menu">
         <nav class="nav-links">
-            <a href="/index.php" class="nav-link home-link">Home</a>
-            <a href="/PetsInfo.php" class="nav-link veterinary-link">Info</a>
-            <a href="/Services.php" class="nav-link contact-link">Services</a>
-            <a href="/BookNow.php" class="nav-link animals-link">Book Now</a>
+            <a href="/mini-Project-Tp-Web/public/index.php" class="nav-link home-link">Home</a>
+            <a href="/mini-Project-Tp-Web/app/views/Pages/PetsInfo.php" class="nav-link veterinary-link">Info</a>
+            <a href="/mini-Project-Tp-Web/app/views/Pages/Services.php" class="nav-link contact-link">Services</a>
+            <a href="/mini-Project-Tp-Web/app/views/Pages/BookNow.php" class="nav-link animals-link">Book Now</a>
         </nav>
     </div>
     <div class="nav-buttons">
-        <button class="btn sign-in">Sign In</button>
-        <button class="btn sign-up">Sign Up</button>
+    <button class="btn sign-in" onclick="location.href='/mini-Project-Tp-Web/app/views/users/login.php'">Sign In</button>
+    <a class="btn sign-up" onclick="location.href='/mini-Project-Tp-Web/app/views/users/add.php'" >Sign Up</a>
     </div>
 </header>
 <main>

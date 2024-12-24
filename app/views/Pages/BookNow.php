@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Now</title>
-    <link rel="stylesheet" href="../Styles/NavBar.css">
-    <link rel="stylesheet" href="../Styles/Pages.css">
-    <link rel="icon" href="../Assets/pets_logo.png" type="image/png">  <!-- Favicon -->
-
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="../Assets/pets_logo.png" alt="Site Logo"  onclick="window.location.href='../index.html';">
-        </div>
-        
-        <img class="hamburger" src="../Assets/hamburger.png"/>
-        <div class="menu">
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link home-link">Home</a>
-                <a href="../Pages/PetsInfo.html" class="nav-link veterinary-link">Pets Info</a>
-                <a href="../Pages/Services.html" class="nav-link contact-link">Services</a>
-                <a href="../Pages/BookNow.html" class="nav-link animals-link active">Book Now</a>
-            </nav>
-        </div>
-        
-        <div class="nav-buttons">
-            <button class="btn sign-in" onclick="window.location.href='Login.html';">Sign In</button>
-            <button class="btn sign-up">Sign Up</button>
-        </div>
-    </header>
-<main>
+<?php
+$title = "Book Now";
+$content = <<<HTML
     <section>
         <h1>Veterinary Doctor's Working Hours</h1>
         <table id="WorkingHoursTable">
@@ -140,26 +110,10 @@
         </div>
 
     </section>
+HTML;
 
-    <section>
-        <div  id="AppointementsTableDiv">
-            <h1>Appointements Table</h1>
-            <table id="AppointementsTable">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Booking Type</th>
-            </tr>
-            </thead>
-            <tbody>
+$additionalStyles = ["../../../public/Styles/Pages.css"];
+$additionalScripts = ["../../../public/Code/BookNow.js"];
 
-            </tbody>
-            </table>
-        </div>
-    </section>
-</main>
-
-<script src="../Code/BookNow.js"></script>
-</body>
-</html>
+include __DIR__ . '/../layout.php';
+?>

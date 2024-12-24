@@ -1,48 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel="stylesheet" href="../Styles/Pages.css">
-    <link rel="stylesheet" href="../Styles/NavBar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="../Assets/pets_logo.png" type="image/png">  <!-- Favicon -->
-
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="../Assets/pets_logo.png" alt="Site Logo"  onclick="window.location.href='../index.html';">
-        </div>
-        
-        <img class="hamburger" src="../Assets/hamburger.png"/>
-        <div class="menu">
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link home-link">Home</a>
-                <a href="../Pages/PetsInfo.html" class="nav-link veterinary-link">Pets Info</a>
-                <a href="../Pages/Services.html" class="nav-link contact-link active">Services</a>
-                <a href="../Pages/BookNow.html" class="nav-link animals-link">Book Now</a>
-            </nav>
-        </div>
-        
-        <div class="nav-buttons">
-            <button class="btn sign-in" onclick="window.location.href='Login.html';">Sign In</button>
-            <button class="btn sign-up">Sign Up</button>
-        </div>
-    </header>
-<main>
+<?php
+$title = "Services";
+$content = <<<HTML
     <section class="main-container">
         <div class="Images">
             <div class="image-wrapper">
-                <img src="../Assets/cat1.png" alt="cat image"/>
+                <img src="../../../public/Assets/cat1.png" alt="cat image"/>
                 <div class="corner corner-tl"></div>
                 <div class="corner corner-tr"></div>
                 <div class="corner corner-bl"></div>
                 <div class="corner corner-br"></div>
             </div>
             <div class="image-wrapper">
-                <img src="../Assets/dog1.png" alt="dog image"/>
+                <img src="../../../public/Assets/dog1.png" alt="dog image"/>
                 <div class="corner corner-tl"></div>
                 <div class="corner corner-tr"></div>
                 <div class="corner corner-bl"></div>
@@ -96,9 +65,12 @@
         </tbody>
     </table>
     </section>
-</main>
+HTML;
 
-<script src="../Code/Navbar.js"></script>
-<script src="../Code/Converter.js"></script>
-</body>
-</html>
+$additionalStyles = ["../../../public/Styles/Pages.css"];
+$additionalScripts = ["../../../public/Code/NavBar.js"];
+$additionalScripts = ["../../../public/Code/Converter.js"];
+
+include __DIR__ . '/../layout.php';
+?>
+

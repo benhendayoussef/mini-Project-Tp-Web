@@ -19,13 +19,13 @@ class UserController extends BaseController {
             try {
                 $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
                 $this->userModel->addUser($name, $username, $hashedPassword);
-                header("Location: /success.php");
+                header("Location: /mini-Project-Tp-Web/public/index.php");
                 exit();
             } catch (Exception $e) {
-                $this->render('register', ['error' => $e->getMessage()]);
+                $this->render('users/add', ['error' => $e->getMessage()]);
             }
         } else {
-            $this->render('register');
+            $this->render('users/add');
         }
     }
 
@@ -48,7 +48,7 @@ class UserController extends BaseController {
                 $user = $this->userModel->getUserByUsername($username);
 
                 if ($user && password_verify($password, $user['password'])) {
-                    setcookie("auth_user", $user['id'], time() + 3600, "/");
+                    setcookie("auth_user", $user['id'], time() + 60*60*24*7, "/");
                     header("Location: /dashboard.php");
                     exit();
                 } else {
@@ -63,9 +63,15 @@ class UserController extends BaseController {
     }
 
     public function logout() {
-        setcookie("auth_user", "", time() - 3600, "/"); 
+        setcookie("auth_user", "", time() - 60*60*24*7, "/"); 
         header("Location: /login.php");
         exit();
     }
 }
+
+if (isset($_GET['action']) && $_GET['action'] === 'register') {
+    $controller = new UserController();
+    $controller->register();
+}
+
 ?>

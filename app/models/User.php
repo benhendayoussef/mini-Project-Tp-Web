@@ -1,4 +1,5 @@
 <?php 
+require_once __DIR__ . '/../models/Database.php';  // Add this line to include the Database class
 
 class User{
 
