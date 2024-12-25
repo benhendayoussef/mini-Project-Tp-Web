@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($title) ? $title : "Animal & Veterinary Project"; ?></title>
-    <link rel="stylesheet" href="../../../public/Styles/Navbar.css">
+    <link rel="stylesheet" href="/mini-Project-Tp-Web/public/Styles/Navbar.css">
     <link rel="icon" href="../../../public/Assets/pets_logo.png" type="image/png">
     <?php if (isset($additionalStyles)) : ?>
         <?php foreach ($additionalStyles as $style) : ?>
-            <link rel="stylesheet" href="<?= $style; ?>">
+            <link rel="stylesheet" type="" href="<?= $style; ?>">
         <?php endforeach; ?>
     <?php endif; ?>
 </head>
@@ -21,7 +21,7 @@
         <nav class="nav-links">
             <a href="/mini-Project-Tp-Web/public/index.php" class="nav-link home-link">Home</a>
             <a href="/mini-Project-Tp-Web/app/views/Pages/PetsInfo.php" class="nav-link veterinary-link">Info</a>
-            <a href="/mini-Project-Tp-Web/app/views/Pages/Services.php" class="nav-link contact-link">Services</a>
+            <a href="/mini-Project-Tp-Web/app/views/Items/add.php" class="nav-link contact-link">Services</a>
             <a href="/mini-Project-Tp-Web/app/views/Pages/BookNow.php" class="nav-link animals-link">Book Now</a>
         </nav>
     </div>

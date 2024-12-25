@@ -40,13 +40,12 @@ class Item{
         return $item;
     }
 
-    public function getAlltems(){
+    public function getAllItems(){
      
         $db = Database::connect();
         $stmt=$db->prepare("SELECT * FROM items");
         $stmt->execute([]);
-        $item = $stmt->fetchAll();
-        return $item;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); 
     }
 }
 
