@@ -32,11 +32,12 @@ class ItemController extends BaseController {
                 $item =new Item();
                 $item->deleteItem($id);
                 echo "Item deleted successfully.";
+                header("Location: /mini-Project-Tp-Web/app/views/Items/add.php");
             } catch (Exception $e) {
                 echo "Error: " . $e->getMessage();
             }
         } else {
-            $this->render('items/delete');
+            $this->render('items/add', ['error' => 'Invalid request.']);
         }
     }
 
@@ -51,6 +52,23 @@ class ItemController extends BaseController {
         }
 
     }
+    public function addItemPanier() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            try {
+                $id = $_POST['id'];
+                $item =new Item();
+                $item->addItemToModalAndCookies($id,1);
+                echo "Item added successfully.";
+                $this->render('items/add');
+            } catch (Exception $e) {
+                echo "Error: " . $e->getMessage();
+                $this->render('items/add', ['error' => $e->getMessage()]);
+            }
+        } else {
+            $this->render('items/add', ['error' => 'Invalid request.']);
+        }
+    }
+
 }
 
 if (isset($_GET['action']) && $_GET['action'] === 'add') {
@@ -62,7 +80,10 @@ if (isset($_GET['action']) && $_GET['action'] === 'add') {
         $controller->delete();
     } elseif ($action === 'list') {
         $controller->getItems();
+    } elseif ($action === 'addPanier') {
+        $controller->addItemPanier();
     }
+
 }
 
 

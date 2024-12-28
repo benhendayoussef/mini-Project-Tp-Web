@@ -39,6 +39,24 @@ class Item{
         $item = $stmt->fetch();
         return $item;
     }
+    function addItemToModalAndCookies($itemId, $itemQuantity) {
+        $panier = isset($_COOKIE['panier']) ? json_decode($_COOKIE['panier'], true) : [];
+        $itemName=$this->getItem($itemId)['name'];
+        $itemExists = false;
+        foreach ($panier as &$item) {
+            if ($item['name'] === $itemName) {
+                $item['quantity'] += $itemQuantity;
+                $itemExists = true;
+                break;
+            }
+        }
+    
+        if (!$itemExists) {
+            $panier[] = ['name' => $itemName, 'quantity' => $itemQuantity];
+        }
+        setcookie('panier', json_encode($panier), time() + (7 * 24 * 60 * 60), "/");
+    }
+
 
     public function getAllItems(){
      

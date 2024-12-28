@@ -41,7 +41,7 @@ class UserController extends BaseController {
 
     public function login() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'] ?? '';
+            $username = $_POST['userName'] ?? '';
             $password = $_POST['password'] ?? '';
 
             try {
@@ -49,16 +49,16 @@ class UserController extends BaseController {
 
                 if ($user && password_verify($password, $user['password'])) {
                     setcookie("auth_user", $user['id'], time() + 60*60*24*7, "/");
-                    header("Location: /dashboard.php");
+                    header("Location: /mini-Project-Tp-Web/public/index.php");
                     exit();
                 } else {
-                    $this->render('login', ['error' => 'Invalid username or password.']);
+                    $this->render('users/login', ['error' => 'Invalid username and/or password.']);
                 }
             } catch (Exception $e) {
-                $this->render('login', ['error' => $e->getMessage()]);
+                $this->render('users/login', ['error' => $e->getMessage()." ".$username." password ".$password]);
             }
         } else {
-            $this->render('login'); 
+            $this->render('users/login'); 
         }
     }
 
@@ -72,6 +72,10 @@ class UserController extends BaseController {
 if (isset($_GET['action']) && $_GET['action'] === 'register') {
     $controller = new UserController();
     $controller->register();
+}
+if (isset($_GET['action']) && $_GET['action'] === 'login') {
+    $controller = new UserController();
+    $controller->login();
 }
 
 ?>

@@ -1,12 +1,13 @@
 <?php
 $title = "Login";
 $content = <<<HTML
+<link rel="stylesheet" href="/mini-Project-Tp-Web/public/Styles/pages.css">
 <section class="main-container">
     <div id="AppointementForm">
         <h2>Log in</h2>
         <p>The administrator will contact you shortly to confirm the time and day of consultation.</p>
 
-        <form id="LoginForm">
+        <form id="LoginForm"  action="/mini-Project-Tp-Web/app/controllers/UserController.php?action=login" method="POST">
             <div class="form-group">
                 <label for="userName">Name</label>
                 <input type="text" id="userName" name="userName" required>
@@ -27,6 +28,9 @@ $content = <<<HTML
 HTML;
 
 $additionalStyles = ["../../../public/Styles/Pages.css"];
-$additionalScripts = ["../../../public/Code/Login.js"];
 
 include __DIR__ . '/../layout.php';
+
+?>
+<?= 
+        $error ? "<p class='error'>$error</p>" : "" ?>

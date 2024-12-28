@@ -1,6 +1,7 @@
 <?php
 $title = "Register";
 $content = <<<HTML
+<link rel="stylesheet" href="/mini-Project-Tp-Web/public/Styles/pages.css">
 <section class="main-container">
     <div id="AppointementForm">
         <h2>Register</h2>
